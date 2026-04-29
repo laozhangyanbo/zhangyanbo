@@ -1,3 +1,4 @@
+import{ agents } from "@/data/agents"
 import UserCard from "./components/UserCard"
 type User = {
   name: string
@@ -10,12 +11,26 @@ const mockUser: User = {
   bio: "AI Builder | Zhihu Hackathon 2026",
   followers: 1234
 }
-
 export default function Home() {
   return (
     <main style={{ padding: "40px", fontFamily: "sans-serif" }}>
       <h1>Agent Homepage</h1>
-      <p>My AI Agent for Zhihu Hackathon 2026</p>
+
+      {agents.map((agent) => (
+        <div
+          key={agent.id}
+          style={{
+            border: "1px solid #ddd",
+            padding: "20px",
+            marginTop: "20px",
+            borderRadius: "12px",
+          }}
+        >
+          <h2>{agent.name}</h2>
+          <p>{agent.tagline}</p>
+          <p>{agent.description}</p>
+        </div>
+      ))}
 
       <button
         style={{
@@ -30,9 +45,8 @@ export default function Home() {
       >
         Login (Coming Soon)
       </button>
-<UserCard user={mockUser} />
 
-      
+      <UserCard user={mockUser} />
     </main>
   )
 }
