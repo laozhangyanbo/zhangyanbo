@@ -1,5 +1,6 @@
 import{ agents } from "@/data/agents"
 import UserCard from "./components/UserCard"
+import DecisionPanel from "./components/DecisionPanel";
 type User = {
   name: string
   bio: string
@@ -15,7 +16,7 @@ export default function Home() {
   return (
     <main style={{ padding: "40px", fontFamily: "sans-serif" }}>
       <h1>Agent Homepage</h1>
-
+      <DecisionPanel />
       {agents.map((agent) => (
         <div
           key={agent.id}
