@@ -9,6 +9,7 @@ export async function GET(){
   const data = await res.json()
 
   console.log(data)
-
+  console.log("token:", process.env.ZHIHU_ACCESS_SECRET)
   return Response.json(data)
+
 }
