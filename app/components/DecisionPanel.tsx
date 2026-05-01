@@ -11,7 +11,7 @@ export default function DecisionPanel(){
       headers:{
         "Content-Type": "application/json",
       },
-      body: JSON.stringify({ test: "hello" }),
+      body: JSON.stringify({problem: "我要不要报名 A2A 黑客松"})
     });
 
     const data = await res.json();

@@ -1,10 +1,9 @@
 import{ NextResponse } from "next/server";
 
 export async function POST(req: Request){
-  const body = await req.json();
+  const{ problem } = await req.json();
 
   return NextResponse.json({
-    message: "API works",
-    received: body
+    receivedProblem: problem,
   });
 }
