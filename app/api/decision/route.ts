@@ -5,5 +5,5 @@ export async function POST(req: Request){
 
   return NextResponse.json({
     receivedProblem: problem,
-  });
+  });//Next：replace mock data with real API call
 }
