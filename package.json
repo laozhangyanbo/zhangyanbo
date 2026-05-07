@@ -1,4 +1,5 @@
-｛ "name": "agent-homepage",
+｛ 
+"name": "agent-homepage",
   "version": "0.1.0",
   "private": true,
   "scripts":{
